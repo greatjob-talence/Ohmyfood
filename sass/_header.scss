@@ -1,0 +1,19 @@
+@import "./variables";
+
+.main-header {
+    max-width: 1500px;
+    height: 15vh;
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.5;
+    background-color: $primary-colour;
+    color: $secondary-colour;
+    letter-spacing: -0.3rem;
+    border-bottom: solid 2px $border-colour;
+    display: flex;
+    justify-content: center;
+
+    a {
+        color: $secondary-colour;
+    }
+}

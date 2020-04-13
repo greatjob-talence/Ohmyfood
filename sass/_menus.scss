@@ -1,0 +1,288 @@
+@import "variables";
+@import "mixins";
+
+.container {
+    max-width: 1500px;
+    max-height: 2388px;
+    margin: 0 auto;
+}
+
+.menu {
+    /*    max-width: 1190px;
+    max-height: 1684px; */
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    li {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.logo {
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    margin: 5% 0 3% 0;
+
+    a {
+        color: $clr-logo;
+    }
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1rem;
+    transform: scale(1);
+
+    &::before,
+    &::after {
+        display: inline-block;
+    }
+}
+
+.underline {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        transform-origin: bottom right;
+        transition: transform 300ms ease-out;
+    }
+
+    &:hover::before {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+.price {
+    font-weight: bold;
+}
+
+/*-------------------------------Menu Note Enchantée-----------------------------*/
+
+.menu--note {
+    @include menu-style($clr-fiche-note, $bg-clr-fiche-note, $font-note);
+
+    h2 {
+        font-weight: 900;
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-weight: 900;
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 2rem;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .title--note {
+
+        &::before {
+            content: url(../img/left-n.png);
+            margin: 0 3rem;
+        }
+
+        &::after {
+            content: url(../img/right-n.png);
+            margin: 0 3rem;
+        }
+    }
+
+    .underline::before {
+        background-color: $prim-clr-note;
+    }
+
+    .menu__footer {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 5%;
+        }
+    }
+}
+
+/*-------------------------------Menu Chic à la Française------------------------------------*/
+
+.menu--chic {
+    @include menu-style($clr-fiche-chic, $bg-clr-fiche-chic, $font-chic);
+
+    h2 {
+        @include fiche-transition-style(130deg, $transition-clr1-chic, $transition-clr2-chic);
+        font-size: 3.5rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 2rem;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    & .chic2 {
+        color: $clr-p2;
+    }
+
+    & .chic3 {
+        color: $clr-p3;
+    }
+
+    .title {
+
+        &--chic1::before {
+            content: url(../img/left-1c.png);
+            margin: 0 3rem;
+        }
+
+        &--chic1::after {
+            content: url(../img/right-1c.png);
+            margin: 0 3rem;
+        }
+
+        &--chic2::before {
+            content: url(../img/left-2c.png);
+            margin: 0 3rem;
+        }
+
+        &--chic2::after {
+            content: url(../img/right-2c.png);
+            margin: 0 3rem;
+        }
+
+        &--chic3::before {
+            content: url(../img/left-3c.png);
+            margin: 0 3rem;
+        }
+
+        &--chic3::after {
+            content: url(../img/right-3c.png);
+            margin: 0 3rem;
+        }
+    }
+
+    .underline::before {
+        background-color: $prim-clr-chic;
+    }
+}
+
+/*-------------------------------Menu Délice des papilles------------------------------------*/
+
+.menu--delice {
+    @include menu-style($clr-fiche-delice, $bg-clr-fiche-delice, $font-delice);
+
+    h2 {
+        @include fiche-transition-style(130deg, $transition-clr1-delice, $transition-clr2-delice);
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+        color: $color-black;
+    }
+
+    p {
+        font-size: 2.5em;
+        color: $color-black;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .title {
+
+        &--delice1::before {
+            content: url(../img/left-1d.png);
+            margin: 0 3rem;
+        }
+
+        &--delice1::after {
+            content: url(../img/right-1d.png);
+            margin: 0 3rem;
+        }
+
+        &--delice2::before {
+            content: url(../img/left-2d.png);
+            margin: 0 3rem;
+        }
+
+        &--delice2::after {
+            content: url(../img/right-2d.png);
+            margin: 0 3rem;
+        }
+
+        &--delice3::before {
+            content: url(../img/left-3d.png);
+            margin: 0 3rem;
+        }
+
+        &--delice3::after {
+            content: url(../img/right-3d.png);
+            margin: 0 3rem;
+        }
+    }
+
+    .underline::before {
+        background-color: $color-black;
+    }
+}
+
+/*-------------------------------Menu Palette du gout------------------------------------*/
+
+.menu--palette {
+    @include menu-style($clr-fiche-palette, $bg-clr-fiche-palette, $font-palette);
+
+    h2 {
+        @include fiche-transition-style(130deg, $transition-clr1-palette, $transition-clr2-palette);
+        font-size: 4.5rem;
+    }
+
+    h3 {
+        font-size: 3.5rem;
+        color: $color-black;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 3rem;
+        font-weight: 400;
+        color: $color-black;
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .title--palette {
+
+        &::before {
+            content: url(../img/left-p.png);
+            margin-right: 2rem;
+        }
+
+        &::after {
+            content: url(../img/right-p.png);
+            margin-left: 2rem;
+        }
+    }
+
+    .underline::before {
+        background-color: $clr-underline-palette;
+    }
+}

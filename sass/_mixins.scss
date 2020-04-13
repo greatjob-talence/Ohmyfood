@@ -1,0 +1,46 @@
+@mixin style-link-text($color) {
+    text-decoration: none;
+    list-style: none;
+    color: $color;
+}
+
+@mixin style-btn-basic($color, $bg-color) {
+    border-radius: 1rem;
+    font-size: 3rem;
+    border: none;
+    color: $color;
+    background-color: $bg-color;
+    display: block;
+    margin: 0 auto 4em auto;
+}
+
+@mixin shadow-style($color) {
+    box-shadow: 0.5rem 0.5rem 0.5rem $color, -0.5rem -0.5rem 0.5rem $color;
+}
+
+@mixin fiche-prev-style($color, $bg-color, $font) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+    margin: 4rem;
+    background-color: $bg-color;
+    font-family: $font;
+
+    a {
+        color: $color;
+    }
+}
+
+@mixin menu-style($color, $bg-color, $font) {
+    font-family: $font;
+    background-color: $bg-color;
+    color: $color;
+    margin-bottom: 10%;
+}
+
+@mixin fiche-transition-style($degre, $start-color, $end-color) {
+    color: transparent;
+    background: linear-gradient($degre, $start-color, $end-color);
+    -webkit-background-clip: text;
+}

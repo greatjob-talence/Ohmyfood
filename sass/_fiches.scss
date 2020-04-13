@@ -1,0 +1,85 @@
+@import "variables";
+@import "mixins";
+
+.container {
+    max-width: 1500px;
+    max-height: 2388px;
+    margin: 0 auto;
+}
+
+.fiches {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5rem auto;
+}
+
+.fiche-prev {
+    width: 40%;
+    height: 55vh;
+    @include shadow-style($shadow-colour);
+
+    img {
+        width: 30%;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 5rem;
+    }
+}
+
+.zoom {
+    transform: scale(1);
+    transition: all 200ms;
+
+    &:hover {
+        transform: scale(1.15);
+        opacity: 0.5;
+    }
+}
+
+.fiche-prev--note {
+    @include fiche-prev-style($prim-clr-note, $bg-clr-note-start, $font-note);
+    font-weight: 700;
+}
+
+.fiche-prev--chic {
+    @include fiche-prev-style($prim-clr-chic, $bg-clr-chic-start, $font-chic);
+
+    h2 {
+        @include fiche-transition-style(130deg, #d8852e, #905bfd);
+    }
+}
+
+.fiche-prev--delice {
+    @include fiche-prev-style($prim-clr-delice, $bg-clr-delice-start, $font-delice);
+
+    h2 {
+        @include fiche-transition-style(130deg, #0431df, #0887fb);
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 6rem;
+    }
+}
+
+.fiche-prev--palette {
+    @include fiche-prev-style($prim-clr-palette, $bg-clr-palette-start, $font-palette);
+
+    h2 {
+        @include fiche-transition-style(130deg, #43973d, #beff7f);
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 6rem;
+    }
+}
