@@ -33,6 +33,31 @@
     h3 {
         font-size: 5rem;
     }
+
+    @media (max-width: 1200px) {
+        height: 45vh;
+        width: 45%;
+    }
+
+    @media (max-width: 1024px) {
+        height: 40vh;
+        width: 50%;
+    }
+
+    @media (max-width: 768px) {
+        height: 35vh;
+        width: 60%;
+    }
+
+    @media (max-width: 575px) {
+        height: 30vh;
+        width: 70%;
+    }
+
+    @media (max-width: 420px) {
+        height: 25vh;
+        width: 80%;
+    }
 }
 
 .zoom {
@@ -48,6 +73,30 @@
 .fiche-prev--note {
     @include fiche-prev-style($prim-clr-note, $bg-clr-note-start, $font-note);
     font-weight: 700;
+
+    @media (max-width: 800px) {
+        img {
+            width: 20%;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+        }
+
+        h3 {
+            font-size: 4.8rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        h2 {
+            font-size: 2.3rem;
+        }
+
+        h3 {
+            font-size: 4.2rem;
+        }
+    }
 }
 
 .fiche-prev--chic {
@@ -55,6 +104,26 @@
 
     h2 {
         @include fiche-transition-style(130deg, #d8852e, #905bfd);
+    }
+
+    @media (max-width: 800px) {
+        h2 {
+            font-size: 2.6rem;
+        }
+
+        h3 {
+            font-size: 4.6rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        h2 {
+            font-size: 2.1rem;
+        }
+
+        h3 {
+            font-size: 4.1rem;
+        }
     }
 }
 
@@ -69,6 +138,26 @@
     h3 {
         font-size: 6rem;
     }
+
+    @media (max-width: 800px) {
+        h2 {
+            font-size: 3.5rem;
+        }
+
+        h3 {
+            font-size: 5.5rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        h2 {
+            font-size: 3rem;
+        }
+
+        h3 {
+            font-size: 5rem;
+        }
+    }
 }
 
 .fiche-prev--palette {
@@ -81,5 +170,25 @@
 
     h3 {
         font-size: 6rem;
+    }
+
+    @media (max-width: 800px) {
+        h2 {
+            font-size: 3.5rem;
+        }
+
+        h3 {
+            font-size: 5.5rem;
+        }
+    }
+
+    @media (max-width: 500px) {
+        h2 {
+            font-size: 3rem;
+        }
+
+        h3 {
+            font-size: 5rem;
+        }
     }
 }

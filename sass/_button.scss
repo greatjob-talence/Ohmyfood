@@ -3,17 +3,40 @@
 
 .next {
     @include style-btn-basic($secondary-colour, $primary-colour);
-    width: 30%;
+    width: 40%;
     height: 118px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+
+    @media (max-width: 1024px) {
+        font-size: 2.3rem;
+        height: 9rem;
+    }
+
+    @media (max-width: 768px) {
+        width: 50%;
+        font-size: 2rem;
+        height: 7rem;
+    }
+
+    @media (max-width: 575px) {
+        width: 55%;
+        font-size: 1.6rem;
+        height: 5rem;
+    }
+
+    @media (max-width: 420px) {
+        width: 55%;
+        font-size: 1.4rem;
+        height: 4rem;
+    }
 }
 
 .dot {
     position: absolute;
-    margin-left: 1rem;
+    margin: 0 2rem 0 .5rem;
 
     &::after {
         animation: point steps(1, end) 1200ms infinite;

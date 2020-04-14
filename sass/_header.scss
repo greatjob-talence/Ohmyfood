@@ -16,4 +16,14 @@
     a {
         color: $secondary-colour;
     }
+
+    @media (max-width: 768px) {
+        height: 10vh;
+        font-size: 3rem;
+    }
+
+    @media (max-width: 420px) {
+        height: 8vh;
+        font-size: 2.5rem;
+    }
 }
