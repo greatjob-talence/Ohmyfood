@@ -3,22 +3,29 @@
 
 .container {
     max-width: 1500px;
-    max-height: 2388px;
     margin: 0 auto;
 }
 
 .menu {
     width: 80%;
     margin: 0 auto;
-    padding: 5rem;
+    padding: 2rem;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     li {
         display: flex;
         justify-content: space-between;
+    }
+
+    &__header {
+        padding: 2rem 0;
+    }
+
+    &__footer {
+        padding: 2rem 0;
     }
 }
 
@@ -26,7 +33,7 @@
     font-size: 3rem;
     letter-spacing: 0.1rem;
     text-align: center;
-    margin: 5% 0 3% 0;
+    margin: 3% 0 3% 0;
 
     a {
         color: $clr-logo;
@@ -35,11 +42,15 @@
     @media (max-width: 768px) {
         font-size: 2rem;
     }
+
+    @media (max-width: 420px) {
+        font-size: 1.5rem;
+    }
 }
 
 .title {
+    margin: 1rem 0;
     text-align: center;
-    padding: 2rem;
     transform: scale(1);
 
     &::before,
@@ -74,7 +85,9 @@
     font-weight: bold;
 }
 
-/*-------------------------------Menu Note Enchantée-----------------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*----------------------------------Menu Note Enchantée----------------------------------*/
+/*---------------------------------------------------------------------------------------*/
 
 .menu--note {
     @include menu-style($clr-fiche-note, $bg-clr-fiche-note, $font-note);
@@ -82,41 +95,67 @@
     h2 {
         font-weight: 900;
         font-size: 3rem;
+
+        @media (max-width: 900px) {
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 2rem;
+        }
     }
 
     h3 {
         font-weight: 900;
         font-size: 2.5rem;
+
+        @media (max-width: 900px) {
+            font-size: 2rem;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 1.5rem;
+        }
     }
 
     p {
         font-size: 2rem;
         padding: 1rem;
-        margin: 1rem;
+        margin: 1rem 3rem;
+
+        @media (max-width: 900px) {
+            font-size: 1.7rem;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 1.4rem;
+        }
     }
 
     .title--note {
 
         &::before {
             content: url(../img/left-n.png);
-            margin: 0 3rem;
+            margin-right: 2rem;
         }
 
         &::after {
             content: url(../img/right-n.png);
-            margin: 0 3rem;
+            margin-left: 2rem;
         }
 
         &::before,
         &::after {
             @media (max-width: 1300px) {
                 width: 100%;
-                padding: 0;
+            }
+
+            @media (max-width: 700px) {
+                transform: scale(0.7);
             }
 
             @media (max-width: 500px) {
-                transform: scale(0.7);
-                padding: 0;
+                transform: scale(0.5);
             }
         }
     }
@@ -130,14 +169,16 @@
         justify-content: center;
 
         img {
-            width: auto;
-            height: 100%;
+            width: 8%;
+            height: 8%;
             margin-right: 2rem;
         }
     }
 }
 
-/*-------------------------------Menu Chic à la Française------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*-------------------------------Menu Chic à la Française--------------------------------*/
+/*---------------------------------------------------------------------------------------*/
 
 .menu--chic {
     @include menu-style($clr-fiche-chic, $bg-clr-fiche-chic, $font-chic);
@@ -145,16 +186,40 @@
     h2 {
         @include fiche-transition-style(130deg, $transition-clr1-chic, $transition-clr2-chic);
         font-size: 3.5rem;
+
+        @media (max-width: 900px) {
+            font-size: 3rem;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 2.5rem;
+        }
     }
 
     h3 {
         font-size: 2.5rem;
+
+        @media (max-width: 900px) {
+            font-size: 2rem;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 1.5rem;
+        }
     }
 
     p {
         font-size: 2rem;
         padding: 1rem;
-        margin: 1rem;
+        margin: 1rem 3rem;
+
+        @media (max-width: 900px) {
+            font-size: 1.7rem;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 1.4rem;
+        }
     }
 
     & .chic2 {
@@ -169,42 +234,47 @@
 
         &--chic1::before {
             content: url(../img/left-1c.png);
-            margin: 0 3rem;
+            margin-right: 2rem;
         }
 
         &--chic1::after {
             content: url(../img/right-1c.png);
-            margin: 0 3rem;
+            margin-left: 2rem;
         }
 
         &--chic2::before {
             content: url(../img/left-2c.png);
-            margin: 0 3rem;
+            margin-right: 2rem;
         }
 
         &--chic2::after {
             content: url(../img/right-2c.png);
-            margin: 0 3rem;
+            margin-left: 2rem;
         }
 
         &--chic3::before {
             content: url(../img/left-3c.png);
-            margin: 0 3rem;
+            margin-right: 2rem;
         }
 
         &--chic3::after {
             content: url(../img/right-3c.png);
-            margin: 0 3rem;
+            margin-left: 2rem;
+        }
 
-/*            @media (max-width: 1430px) {
+        &::before,
+        &::after {
+            @media (max-width: 1400px) {
                 width: 100%;
-                padding: 0;
+            }
+
+            @media (max-width: 700px) {
+                transform: scale(0.7);
             }
 
             @media (max-width: 500px) {
-                transform: scale(0.7);
-                padding: 0;
-            } */
+                transform: scale(0.5);
+            }
         }
     }
 
@@ -213,7 +283,9 @@
     }
 }
 
-/*-------------------------------Menu Délice des papilles------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+/*-------------------------------Menu Délice des papilles--------------------------------*/
+/*---------------------------------------------------------------------------------------*/
 
 .menu--delice {
     @include menu-style($clr-fiche-delice, $bg-clr-fiche-delice, $font-delice);
@@ -221,79 +293,88 @@
     h2 {
         @include fiche-transition-style(130deg, $transition-clr1-delice, $transition-clr2-delice);
         font-size: 4rem;
+
+        @media (max-width: 900px) {
+            font-size: 3.5rem;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 3rem;
+        }
     }
 
     h3 {
         font-size: 3rem;
         color: $color-black;
+
+        @media (max-width: 900px) {
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 2rem;
+        }
     }
 
     p {
         font-size: 2.5em;
         color: $color-black;
         padding: 1rem;
-        margin: 1rem;
+        margin: 1rem 3rem;
+
+        @media (max-width: 900px) {
+            font-size: 2rem;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 1.7rem;
+        }
     }
 
     .title {
 
         &--delice1::before {
             content: url(../img/left-1d.png);
-            margin: 0 3rem;
-
-            @media (max-width: 1324px) {
-                width: 100%;
-                margin: 0;
-            }
+            margin-right: 2rem;
         }
 
         &--delice1::after {
             content: url(../img/right-1d.png);
-            margin: 0 3rem;
-
-            @media (max-width: 1324px) {
-                width: 100%;
-                margin: 0;
-            }
+            margin-left: 2rem;
         }
 
         &--delice2::before {
             content: url(../img/left-2d.png);
-            margin: 0 3rem;
-
-            @media (max-width: 1324px) {
-                width: 100%;
-                margin: 0;
-            }
+            margin-right: 2rem;
         }
 
         &--delice2::after {
             content: url(../img/right-2d.png);
-            margin: 0 3rem;
-
-            @media (max-width: 1324px) {
-                width: 100%;
-                margin: 0;
-            }
+            margin-left: 2rem;
         }
 
         &--delice3::before {
             content: url(../img/left-3d.png);
-            margin: 0 3rem;
-
-            @media (max-width: 1324px) {
-                width: 100%;
-                margin: 0;
-            }
+            margin-right: 2rem;
         }
 
         &--delice3::after {
             content: url(../img/right-3d.png);
-            margin: 0 3rem;
+            margin-left: 2rem;
+        }
 
-            @media (max-width: 1324px) {
+        &::before,
+        &::after {
+            @media (max-width: 1300px) {
                 width: 100%;
-                margin: 0;
+            }
+
+            @media (max-width: 700px) {
+                transform: scale(0.7);
+            }
+
+            @media (max-width: 500px) {
+                transform: scale(0.5);
             }
         }
     }
@@ -303,7 +384,9 @@
     }
 }
 
+/*---------------------------------------------------------------------------------------*/
 /*-------------------------------Menu Palette du gout------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
 
 .menu--palette {
     @include menu-style($clr-fiche-palette, $bg-clr-fiche-palette, $font-palette);
@@ -311,12 +394,28 @@
     h2 {
         @include fiche-transition-style(130deg, $transition-clr1-palette, $transition-clr2-palette);
         font-size: 4.5rem;
+
+        @media (max-width: 900px) {
+            font-size: 4em;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 3.5em;
+        }
     }
 
     h3 {
         font-size: 3.5rem;
         color: $color-black;
         font-weight: 700;
+
+        @media (max-width: 900px) {
+            font-size: 3rem;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 2.5rem;
+        }
     }
 
     p {
@@ -324,7 +423,15 @@
         font-weight: 400;
         color: $color-black;
         padding: 1rem;
-        margin: 1rem;
+        margin: 1rem 3rem;
+
+        @media (max-width: 900px) {
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 2rem;
+        }
     }
 
     .title--palette {
@@ -332,20 +439,25 @@
         &::before {
             content: url(../img/left-p.png);
             margin-right: 2rem;
-
-            @media (max-width: 1324px) {
-                width: 100%;
-                margin: 0;
-            }
         }
 
         &::after {
             content: url(../img/right-p.png);
             margin-left: 2rem;
+        }
 
-            @media (max-width: 1324px) {
+        &::before,
+        &::after {
+            @media (max-width: 1400px) {
                 width: 100%;
-                margin: 0;
+            }
+
+            @media (max-width: 700px) {
+                transform: scale(0.7);
+            }
+
+            @media (max-width: 500px) {
+                transform: scale(0.5);
             }
         }
     }

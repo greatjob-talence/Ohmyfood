@@ -1,14 +1,8 @@
 @import "variables";
 @import "mixins";
 
-.container {
-    max-width: 1500px;
-    max-height: 2388px;
-    margin: 0 auto;
-}
-
 .fiches {
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -23,7 +17,7 @@
     @include shadow-style($shadow-colour);
 
     img {
-        width: 30%;
+        width: 25%;
     }
 
     h2 {
@@ -35,28 +29,23 @@
     }
 
     @media (max-width: 1200px) {
-        height: 45vh;
         width: 45%;
+        height: 45vh;
     }
 
-    @media (max-width: 1024px) {
-        height: 40vh;
+    @media (max-width: 800px) {
         width: 50%;
-    }
-
-    @media (max-width: 768px) {
         height: 35vh;
-        width: 60%;
     }
 
-    @media (max-width: 575px) {
-        height: 30vh;
-        width: 70%;
+    @media (max-width: 600px) {
+        width: 60%;
+        height: 25vh;
     }
 
     @media (max-width: 420px) {
-        height: 25vh;
-        width: 80%;
+        width: 65%;
+        height: 20vh;
     }
 }
 
@@ -70,11 +59,15 @@
     }
 }
 
+/*---------------------------------------------------------------------------------------*/
+/*----------------------------------Fiche Note Enchantée---------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+
 .fiche-prev--note {
     @include fiche-prev-style($prim-clr-note, $bg-clr-note-start, $font-note);
     font-weight: 700;
 
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
         img {
             width: 20%;
         }
@@ -84,20 +77,48 @@
         }
 
         h3 {
-            font-size: 4.8rem;
+            font-size: 4rem;
         }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 800px) {
+        img {
+            width: 15%;
+        }
+
         h2 {
-            font-size: 2.3rem;
+            font-size: 2.5rem;
         }
 
         h3 {
-            font-size: 4.2rem;
+            font-size: 3.5rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 3rem;
+        }
+    }
+
+    @media (max-width: 420px) {
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            font-size: 2.5rem;
         }
     }
 }
+
+/*---------------------------------------------------------------------------------------*/
+/*----------------------------------Fiche Chic Français----------------------------------*/
+/*---------------------------------------------------------------------------------------*/
 
 .fiche-prev--chic {
     @include fiche-prev-style($prim-clr-chic, $bg-clr-chic-start, $font-chic);
@@ -106,26 +127,50 @@
         @include fiche-transition-style(130deg, #d8852e, #905bfd);
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
         h2 {
-            font-size: 2.6rem;
+            font-size: 2.8rem;
         }
 
         h3 {
-            font-size: 4.6rem;
+            font-size: 4rem;
         }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 800px) {
         h2 {
-            font-size: 2.1rem;
+            font-size: 2.5rem;
         }
 
         h3 {
-            font-size: 4.1rem;
+            font-size: 3.5rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 3rem;
+        }
+    }
+
+    @media (max-width: 420px) {
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            font-size: 2.5rem;
         }
     }
 }
+
+/*---------------------------------------------------------------------------------------*/
+/*----------------------------------Fiche Délice Papilles--------------------------------*/
+/*---------------------------------------------------------------------------------------*/
 
 .fiche-prev--delice {
     @include fiche-prev-style($prim-clr-delice, $bg-clr-delice-start, $font-delice);
@@ -139,7 +184,7 @@
         font-size: 6rem;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
         h2 {
             font-size: 3.5rem;
         }
@@ -149,7 +194,7 @@
         }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 800px) {
         h2 {
             font-size: 3rem;
         }
@@ -158,7 +203,31 @@
             font-size: 5rem;
         }
     }
+
+    @media (max-width: 600px) {
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            font-size: 4.5rem;
+        }
+    }
+
+    @media (max-width: 420px) {
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 4rem;
+        }
+    }
 }
+
+/*---------------------------------------------------------------------------------------*/
+/*----------------------------------Fiche Palette Gout--------------------------------*/
+/*---------------------------------------------------------------------------------------*/
 
 .fiche-prev--palette {
     @include fiche-prev-style($prim-clr-palette, $bg-clr-palette-start, $font-palette);
@@ -172,7 +241,7 @@
         font-size: 6rem;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
         h2 {
             font-size: 3.5rem;
         }
@@ -182,13 +251,33 @@
         }
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 800px) {
         h2 {
             font-size: 3rem;
         }
 
         h3 {
             font-size: 5rem;
+        }
+    }
+
+    @media (max-width: 600px) {
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        h3 {
+            font-size: 4.5rem;
+        }
+    }
+
+    @media (max-width: 420px) {
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 4rem;
         }
     }
 }
