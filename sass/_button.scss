@@ -3,8 +3,8 @@
 
 .next {
     @include style-btn-basic($secondary-colour, $primary-colour);
-    width: 40%;
-    height: 118px;
+    max-width: 40%;
+    max-height: 118px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,25 +12,20 @@
 
     @media (max-width: 1024px) {
         font-size: 2.3rem;
-        height: 9rem;
     }
 
     @media (max-width: 768px) {
-        width: 50%;
-        font-size: 2rem;
-        height: 7rem;
+        font-size: 1.8rem;
+        min-width: 45%;
     }
 
     @media (max-width: 575px) {
-        width: 55%;
-        font-size: 1.6rem;
-        height: 5rem;
+        font-size: 1.5rem;
+        min-width: 50%;
     }
 
     @media (max-width: 420px) {
-        width: 55%;
-        font-size: 1.4rem;
-        height: 4rem;
+        font-size: 1.2rem;
     }
 }
 
