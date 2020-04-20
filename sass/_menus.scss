@@ -30,7 +30,7 @@
 }
 
 .logo {
-    font-size: 3rem;
+    font-size: 4rem;
     letter-spacing: 0.1rem;
     text-align: center;
     margin: 3% 0 3% 0;
@@ -58,6 +58,8 @@
         display: inline-block;
     }
 }
+
+/* Effet au survol pour les entêtes "entrée / plat / dessert" = souligner de gauche à droite au départ puis à droite à la fin*/
 
 .underline {
     display: inline-block;

@@ -49,6 +49,8 @@
     }
 }
 
+/* Effet d'agrandissement au survol sur les fiches (+15%) et réduction de l'opacité */
+
 .zoom {
     transform: scale(1);
     transition: all 200ms;
